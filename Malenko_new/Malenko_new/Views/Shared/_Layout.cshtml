@@ -14,21 +14,23 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="main">
-                 @Html.ActionLink("Головна","Index","Home")
+    <div id="mainPage">
+        <div id="header">
+            <div class="main">
+                @Html.ActionLink("Головна", "Index", "Home")
+            </div>
+            <div id="fio"></div>
+            <div class="connect">
+                @Html.ActionLink("Зв`язатися зі мною", "Create", "Home")
+            </div>
         </div>
-        <div id="fio"> </div>
-        <div class="connect">
-                 @Html.ActionLink("Зв`язатися зі мною","Create","Home")
+        <div id="content">
+
+            <div>
+                @RenderBody()
+            </div>
         </div>
+        <div id="footer"></div>
     </div>
-    <div id="content">
-        
-        <div>
-               @RenderBody()
-        </div>
-    </div>
-    <div id="footer"></div>
 </body>
 </html>

@@ -1,6 +1,13 @@
 ﻿body {
 }
 
+#mainPage
+{
+    max-width:1400px;
+     min-width:1250px;
+     margin:0 auto;
+}
+
 #header
 {
     height:50px;
