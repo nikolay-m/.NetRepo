@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LimeSystems.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-chosen.css" rel="stylesheet" />
+
+ 
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+     <script src="Scripts/jquery-2.1.4.intellisense.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/chosen.jquery.js"></script>
+    <script src="Scripts/chosen.jquery.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="Home.aspx">
+                        <asp:Image ID="Logo" runat="server" ImageUrl="~/Content/logo.svg" /></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Home.aspx">
+                            <asp:Literal ID="WelcomeUser" runat="server" Visible="false"></asp:Literal></a></li>
+                        <li><a href="Admin.aspx">
+                            <asp:Literal ID="AdminLink" runat="server" Visible="false"></asp:Literal></a></li>
+                        <li>
+                            <asp:LoginStatus ID="LogoutBtn" CssClass="text-info" runat="server" OnLoggedOut="LogoutBtn_LoggedOut" />
+                        </li>
+
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>
