@@ -1,3 +1,3 @@
-Делалась часть Администратора.
+Data for admin panel
 Login: Admin
 Password: Admin
